@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Мой блог</title>
+
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}"
+>
+</head>
+
+<body>
+
+    <header>
+
+    <h1>Мой блог</h1>
+
+    <p>Мои достижения и навыки в веб-разработке</p>
+
+    <nav>
+         <a href="#about">Обо мне</a>
+         <a href="#skills">Навыки</a>
+         <a href="#achievements">Достижения</a>
+         <a href="#education">Обучение</a>
+    </nav>
+
+    </header>
+
+    <main>
+
+        <section id="about">
+
+            <h2>Обо мне</h2>
+
+            <p>
+                Я изучаю программирование и создаю свои первые
+                веб-приложения с использованием Python и Flask.
+                Так же использую Python в автоматизации тестирования
+            </p>
+                <img
+                src="{{ url_for('static', filename='image.jpg') }}"
+                alt="Моё изображение"
+                class="profile-image"
+                >
+
+        </section>
+
+        <section id="skills">
+
+            <h2>Мои навыки</h2>
+
+            <ul>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Postman</li>
+                <li>Charles</li>
+                <li>Android Studio</li>
+                <li>VS Code</li>
+                <li>Terminal</li>
+                <li>Pytest</li>
+                <li>Devtools</li>
+            </ul>
+
+        </section>
+
+        <section id="achievments">
+
+            <h2>Мои достижения</h2>
+
+            <ol>
+                <li>Изучил основы Python</li>
+                <li>Создал первое Flask приложение</li>
+                <li>Изучаю HTML</li>
+                <li>Изучаю CSS</li>
+                <li>Изучил основы тестирования приложений</li>
+                <li>Изучаю автоматизация тестирования Python</li>
+            </ol>
+
+        </section>
+
+        <article>
+            <h2>Моя цель</h2>
+            <p>
+                Моя цель — научиться создавать полноценные
+                веб-приложения на Python.
+            </p>
+            <button type="button">
+                Моя цель — стать разработчиком
+            </button>
+
+        </article>
+        
+        <section id="education">
+
+            <h2>Моё обучение</h2>
+
+            <table>
+
+                <tr>
+                    <th>Тема</th>
+                    <th>Процент</th>
+                    <th>Выполнение</th>
+                    <th>Домашнее задание</th>
+                    <th>Комментарий</th>
+                    <th>Статус</th>
+                    <th>Дата</th>
+                    <th>Оценка</th>
+                </tr>
+                
+                <tr>
+                    <td>Python</td>
+                    <td>100%</td>
+                    <td>Выполнено</td>
+                    <td>Основы Python</td>
+                    <td>Изучил основы языка</td>
+                    <td>Готово</td>
+                    <td>01.09.2026</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr>
+                    <td>Flask</td>
+                    <td>80%</td>
+                    <td>В процессе</td>
+                    <td>Flask-приложение</td>
+                    <td>Изучаю маршруты</td>
+                    <td>В работе</td>
+                    <td>02.09.2026</td>
+                    <td>5</td>
+                </tr>
+                
+                <tr>
+                    <td>HTML</td>
+                    <td>70%</td>
+                    <td>В процессе</td>
+                    <td>HTML-шаблон</td>
+                    <td>Изучаю теги</td>
+                    <td>В работе</td>
+                    <td>03.09.2026</td>
+                    <td>5</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>Мой учебный проект
+            
+        </p>
+
+    </footer>
+
+</body>
+</html>
