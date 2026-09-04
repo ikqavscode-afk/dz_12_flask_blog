@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+Дневник программиста
+{% endblock %}
+
+{% block content %}
+
+<section>
+    <h2>Дневник программиста</h2>
+
+    <p>Здесь я буду записывать свои достижения,
+        мысли и результаты обучения.
+    </p>
+
+    <form method="POST">
+        <label for="title">Заголовок записи</label>
+        
+        <input
+            type="text"
+            id="title"
+            name="title"
+            required>
+
+        <label for="text">Текст записи</label>
+        
+        <textarea
+            id="text"
+            name="text"
+            required
+        ></textarea>
+        
+        <button type="submit">
+            Добавить запись
+        </button>
+
+    </form>
+
+</section>
+
+<section>
+    <h2>Мои записи</h2>
+    {% for title, text in notes.items() %}
+    <article>
+        <h3>{{ title }}</h3>
+        <p>{{ text }}</p>
+    </article>
+    {% endfor %}
+
+</section>
+
+{% endblock %}
