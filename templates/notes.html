@@ -21,7 +21,12 @@
             id="title"
             name="title"
             required>
-
+        <label for="subtitle">Подзаголовок</label>
+        <input
+            type="text"
+            id="subtitle"
+            name="subtitle"
+        >
         <label for="text">Текст записи</label>
         
         <textarea
@@ -40,10 +45,12 @@
 
 <section>
     <h2>Мои записи</h2>
-    {% for title, text in notes.items() %}
+
+    {% for note in notes %}
     <article>
-        <h3>{{ title }}</h3>
-        <p>{{ text }}</p>
+        <h3>{{ note.title }}</h3>
+        <h4>{{ note.subtitle }}</h4>
+        <p>{{ note.text }}</p>
     </article>
     {% endfor %}
 
